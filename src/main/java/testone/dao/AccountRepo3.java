@@ -3,6 +3,8 @@ package testone.dao;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
+import testone.domain.Account;
+import testone.domain.Account3;
 
 //import org.springframework.stereotype.Repository;
 

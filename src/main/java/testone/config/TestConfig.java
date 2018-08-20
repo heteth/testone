@@ -7,7 +7,7 @@ import org.springframework.data.jdbc.repository.RowMapperMap;
 import org.springframework.data.jdbc.repository.config.ConfigurableRowMapperMap;
 import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
 import org.springframework.data.jdbc.repository.config.JdbcConfiguration;
-import testone.dao.Account3;
+import testone.domain.Account3;
 import testone.dao.Account3Mapper;
 
 @Configuration

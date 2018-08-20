@@ -1,4 +1,4 @@
-package testone.dao;
+package testone.domain;
 
 import org.springframework.data.annotation.Id;
 

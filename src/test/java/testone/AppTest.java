@@ -10,6 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import testone.config.TestConfig;
 import testone.dao.*;
+import testone.domain.Account;
+import testone.domain.Account2;
+import testone.domain.Account3;
 
 /**
  * Unit testone for simple App.
@@ -33,7 +36,7 @@ public class AppTest {
 
         System.out.println("a.getId() = " + a.getId() + ", a.getAccountNo() = " + a.getAccountNo() + ", a.getBalance() = " + a.getBalance());
 
-        Account a2 = repo.getAccount("A00002");
+        Account a2 = repo.getAccount("A00003");
 
         System.out.println("a2 = " + a2);
     }
@@ -44,7 +47,7 @@ public class AppTest {
 
         System.out.println("a.getId() = " + a.getId() + ", a.getAccountNumber() = " + a.getAccountNumber() + ", a.getBalance() = " + a.getBalance());
 
-        Account2 a2 = repo2.getAccount("A00002");
+        Account2 a2 = repo2.getAccount("A00003");
 
         System.out.println("a2 = " + a2);
     }

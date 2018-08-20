@@ -1,6 +1,7 @@
 package testone.dao;
 
 import org.springframework.jdbc.core.RowMapper;
+import testone.domain.Account3;
 
 import java.math.BigDecimal;
 import java.sql.ResultSet;
