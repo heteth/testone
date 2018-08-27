@@ -14,6 +14,10 @@ import testone.domain.Account;
 import testone.domain.Account2;
 import testone.domain.Account3;
 
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.Date;
+
 /**
  * Unit testone for simple App.
  */
@@ -29,6 +33,51 @@ public class AppTest {
 
     @Autowired
     AccountRepo3 repo3;
+
+    @Test
+    public void testJustBalance(){
+        System.out.println("repo.getJustBalance(\"A00001\") = " + repo.getJustBalance("A00001").getBalance());
+    }
+
+    @Test
+    public void testTuple() {
+        Tuple3<Long, Date, String> threeValues = repo.getThreeValues();
+        System.out.println("threeValues.get_1() = " + threeValues.get_1());
+        System.out.println("threeValues.get_2() = " + threeValues.get_2());
+        System.out.println("threeValues.get_3() = " + threeValues.get_3());
+
+        Tuple3<Long, Date, String> threeValuesAgain = repo.getThreeValues();
+        System.out.println("threeValuesAgain.get_1() = " + threeValuesAgain.get_1());
+        System.out.println("threeValuesAgain.get_2() = " + threeValuesAgain.get_2());
+        System.out.println("threeValuesAgain.get_3() = " + threeValuesAgain.get_3());
+
+        System.out.println("threeValuesAgain.equals(threeValues) = " + threeValuesAgain.equals(threeValues));
+        System.out.println("threeValues.hashCode() = " + threeValues.hashCode());
+        System.out.println("threeValuesAgain.hashCode() = " + threeValuesAgain.hashCode());
+
+        Tuple3<Long, Date, String> clone = threeValues.clone();
+        System.out.println("clone.get_1() = " + clone.get_1());
+        System.out.println("clone.get_2() = " + clone.get_2());
+        System.out.println("clone.get_3() = " + clone.get_3());
+
+        System.out.println("clone.equals(threeValues) = " + clone.equals(threeValues));
+        System.out.println("clone.hashCode() = " + clone.hashCode());
+    }
+
+    @Test
+    public void testHashcode() {
+        Object[] arr1 = new Object[]{1, new BigDecimal(2), new Date(10000), "3"};
+        Object[] arr2 = new Object[]{1, new BigDecimal(2), new Date(10000), "3"};
+
+        System.out.println("arr1 = " + arr1.hashCode());
+        System.out.println("arr2 = " + arr2.hashCode());
+        System.out.println("eq = " + arr1.equals(arr2));
+
+        System.out.println("arr1 = " + Arrays.asList(arr1).hashCode());
+        System.out.println("arr2 = " + Arrays.asList(arr2).hashCode());
+        System.out.println("eq = " + Arrays.asList(arr1).equals(Arrays.asList(arr2)));
+
+    }
 
     @Test
     public void test(){

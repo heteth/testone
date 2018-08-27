@@ -15,5 +15,5 @@ public interface AccountRepo2 extends Repository<Account, Integer> {
             "left join \"transaction\" on a.id=account_id and status in ('OK','PENDING') " +
             "where account_no=:accountNo " +
             "group by a.id")
-    Account2 getAccount(@Param("accountNo") String accountNo);
+    Account2 getAccount(String accountNo);
 }

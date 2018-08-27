@@ -20,4 +20,16 @@ public class Account {
     public Long getBalance() {
         return balance;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public void setBalance(Long balance) {
+        this.balance = balance;
+    }
 }
